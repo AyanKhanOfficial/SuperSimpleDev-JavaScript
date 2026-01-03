@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ATM Cash Withdrawal System</title>
+  </head>
+  <body>
+    <script>
+      function withdrawCash(balance, withdrawAmount, dailyLimit) {
+        if (withdrawAmount <= 0) {
+          return 'Invalid amount';
+        } else if (withdrawAmount > dailyLimit) {
+          return 'Daily limit exceeded';
+        } else if (withdrawAmount > balance) {
+          return 'Insufficient balance';
+        } else {
+          return balance - withdrawAmount;
+        }
+      }
+      console.log(withdrawCash(1000, 500, 800));
+      console.log(withdrawCash(1000, 900, 800));
+      console.log(withdrawCash(300, 500, 800));
+      console.log(withdrawCash(1000, -500, 800));
+      console.log(withdrawCash(800, 800, 800));
+    </script>
+  </body>
+</html>

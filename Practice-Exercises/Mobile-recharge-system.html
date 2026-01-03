@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mobile Recharge System</title>
+  </head>
+  <body>
+    <h1>Mobile Recharge System</h1>
+    <script>
+      function rechargePhone(balance = 0, rechargeAmount = 100) {
+        if (rechargeAmount <= 0) {
+          return 'Invalid amount!';
+        } else if (rechargeAmount < 100) {
+          return 'Minimum recharge of 100 is allowed.';
+        } else {
+          let totalBalance = balance + rechargeAmount;
+          return `Balance: ${totalBalance}`;
+        }
+      }
+      console.log(rechargePhone(200, 100));
+    </script>
+  </body>
+</html>
