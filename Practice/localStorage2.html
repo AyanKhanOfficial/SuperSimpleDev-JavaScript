@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Local Storage in JavaScript Explained</title>
+  </head>
+  <body>
+    <h2>Local Storage in JavaScript Explained</h2>
+    <script>
+      /*
+      console.log(localStorage.setItem('username', 'Ayan Khan'));
+      console.log(localStorage.getItem('username')); */
+
+      const user = {
+        name: 'Ayan Khan',
+        age: 22,
+        location: 'Swat',
+        department: 'Nadra',
+      };
+      localStorage.setItem('user', JSON.stringify(user));
+
+      const savedUser = JSON.parse(localStorage.getItem('user'));
+      console.log(savedUser);
+      localStorage.clear();
+    </script>
+  </body>
+</html>
