@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DOM Projects</title>
+  </head>
+  <body>
+    <h2>Amazon Shipping Calculator</h2>
+
+    <input
+      placeholder="Cost of Order"
+      class="input"
+      onkeydown="keyboardEnter(event);"
+    />
+    <button onclick="calculateTotal()">Calculate</button>
+    <p class="showResult"></p>
+    <script>
+      function calculateTotal() {
+        let cost = Number(document.querySelector('.input').value) * 100;
+        const resultElement = document.querySelector('.showResult');
+
+        if (!cost || cost <= 0) {
+          resultElement.innerText = 'Please enter a valid amount';
+          return;
+        }
+
+        if (cost < 4000) {
+          cost = cost + 1000;
+        }
+
+        resultElement.innerText = `Total Cost: $${cost / 100}`;
+      }
+      function keyboardEnter(event) {
+        if (event.key === 'Enter') {
+          calculateTotal();
+        }
+      }
+    </script>
+  </body>
+</html>

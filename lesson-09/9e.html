@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DOM</title>
+  </head>
+
+  <body>
+    <input
+      placeholder="Enter your name"
+      class="input"
+      onkeydown="
+      if (event.key === 'Enter'){
+       submit();
+      }"
+    />
+    <button onclick="submit();">Submit</button>
+    <p></p>
+    <script>
+      function submit() {
+        let text = document.querySelector('.input').value;
+        let result = document.querySelector('p');
+        result.innerText = `Your  name is: ${text}`;
+      }
+    </script>
+  </body>
+</html>
