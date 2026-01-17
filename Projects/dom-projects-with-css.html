@@ -3,11 +3,44 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>DOM Projects</title>
+    <title>DOM Projects with CSS</title>
+    <style>
+      body {
+        font-family: Arial;
+      }
+      .subscribe-button {
+        background-color: black;
+        color: white;
+        font-weight: bold;
+        padding: 10px 15px;
+        border: none;
+        border-radius: 45px;
+        cursor: pointer;
+      }
+      .subscribed {
+        color: black;
+        background-color: rgb(240, 240, 240);
+      }
+      .input {
+        font-size: 14px;
+        padding: 10px 15px;
+      }
+      .calculate {
+        padding: 12px 15px;
+        background-color: green;
+        border: none;
+        color: white;
+        font-family: bold;
+        font-family: Arial;
+        cursor: pointer;
+        font-size: 14px;
+
+      }
+    </style>
   </head>
   <body>
     <h2>YouTube Subscribe Button</h2>
-    <button class="js-subscribe-button" onclick="subscribe()">Subscribe</button>
+    <button class="js-subscribe-button subscribe-button" onclick="subscribe()">Subscribe</button>
     <hr />
     <h2>Amazon Shipping Calculator</h2>
 
@@ -16,7 +49,7 @@
       class="input"
       onkeydown="keyboardEnter(event)"
     />
-    <button onclick="calculateTotal()">Calculate</button>
+    <button  class="calculate" onclick="calculateTotal()">Calculate</button>
     <p class="showResult"></p>
     <script>
       function calculateTotal() {
@@ -44,8 +77,10 @@
 
         if (buttonElement.innerText === "Subscribe") {
           buttonElement.innerText = "Subscribed";
+          buttonElement.classList.add('subscribed');
         } else {
           buttonElement.innerText = "Subscribe";
+          buttonElement.classList.remove('subscribed')
         }
       }
     </script>
