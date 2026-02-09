@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Arrays in JS</title>
+  </head>
+  <body>
+    <script>
+      const fruits = ["Apple", "Banana"];
+      fruits.unshift("Appricot");
+      fruits.push("Watermelon");
+      fruits.shift();
+      fruits.pop();
+      fruits.push("Watermelon");
+      fruits.push("Mango");
+      console.log(fruits.length);
+      console.log(fruits);
+
+      const number = [10, 20, 30, 40];
+
+      console.log(number);
+
+      let double = number.map((n) => n * 2);
+      console.log(double);
+      let square = number.map((n) => n * n);
+      console.log(square);
+
+      console.log(number.filter((n) => n < 30));
+      console.log(typeof [1, 2, 3]);
+    </script>
+  </body>
+</html>
