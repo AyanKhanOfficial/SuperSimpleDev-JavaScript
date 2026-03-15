@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lesson 12 - Advanced Functions</title>
+    <style>
+      * {
+        font-family: Arial;
+      }
+      .green {
+        color: darkgreen;
+      }
+    </style>
+  </head>
+  <body>
+    <button class="cart-button" onclick="displayMessage()">Add to cart</button>
+    <p class="message"></p>
+    <script>
+      let timeoutId;
+      function displayMessage() {
+        const message = document.querySelector(".message");
+        message.innerHTML = "Added";
+        clearTimeout(timeoutId);
+        message.classList.add("green");
+        timeoutId = setTimeout(function () {
+          message.innerHTML = "";
+        }, 3000);
+      }
+    </script>
+  </body>
+</html>

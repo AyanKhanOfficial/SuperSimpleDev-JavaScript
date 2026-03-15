@@ -1,0 +1,20 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lesson 12 - Advanced Functions</title>
+  </head>
+  <body>
+    <button class="finish-button" onclick="updateButton()">Start</button>
+    <script>
+      function updateButton() {
+        const button = document.querySelector(".finish-button");
+        setTimeout(function () {
+          button.innerHTML = "Finished";
+        }, 3000);
+        button.innerHTML = "Loading...";
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lesson 12 - Advanced Functions</title>
+  </head>
+  <body>
+    <script>
+      const add = function () {
+        console.log(2 + 3);
+      };
+      function runTwice(add) {
+        add();
+        add();
+      }
+      runTwice(function () {
+        console.log("12b");
+      });
+      runTwice(add);
+    </script>
+  </body>
+</html>
